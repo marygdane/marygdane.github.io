@@ -1,19 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Socket.IO chat</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <ul id="messages"></ul>
-    <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
-    </form>
-    <script
-       src="https://code.jquery.com/jquery-3.1.1.min.js"
-       integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-       crossorigin="anonymous"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="/client.js"></script>
-  </body>
+	<head>
+		<title>Socket.IO chat</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<style type="text/css"></style>
+	</head>
+	<body>
+		<!-- contains user label, chat log, and list of users -->
+		<div id="topPond">
+			<div id="chatContents">
+				<div id="userLabel"></div>
+				<div id="messageLog">
+					<ul id="messages"></ul>
+				</div>
+			</div>
+			<div id="listOfUsersContainer">
+				<div id="listOfUsersLabel">
+					<b>Online users</b>
+				</div>
+				<div id="listOfUsers"></div>
+			</div>
+		</div>
+
+		<!-- Users enter their messages here -->
+		<div id="bottomPond">
+			<form action="">
+				<input id="m" autocomplete="off" />
+			</form>
+		</div>
+		
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+		   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+		   crossorigin="anonymous"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="/client.js"></script>
+	</body>
 </html>

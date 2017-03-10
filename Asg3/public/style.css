@@ -1,8 +1,50 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font: 13px Helvetica, Arial; }
-form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
-form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
-form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+body { background: #0B3C5D; font: 13px Helvetica, Arial; }
+form { background: #000; padding: 3px; width: 98%; min-width: 250px; margin: 1%;}
+form input { background: #D9B310; border: 0; padding: 10px; width: 100%; }
 #messages { list-style-type: none; margin: 0; padding: 0; }
 #messages li { padding: 5px 10px; }
-#messages li:nth-child(odd) { background: #eee; }
+#messages li:nth-child(odd) { background: #ECD987; }
+
+#topPond {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+#listOfUsersContainer {
+	background: #328CC1;
+	width: 25%;
+	min-width: 100px;
+	padding: 10px;
+}
+
+#listOfUsers {
+	background: #1D2731;
+	color: #FFFFFF;
+	padding: 10px;
+	height: 500px;
+	max-height: 500px;
+	overflow: auto;
+}
+	
+#chatContents {
+	background: #328CC1;
+	width: 75%;
+	min-width: 300px;
+	padding: 10px;
+}
+
+#userLabel, #listOfUsersLabel {
+	padding: 10px 0px;
+}
+
+#messageLog {
+	background: #FFFFFF;
+	padding: 10px;
+	height: 500px;
+	max-height: 500px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	word-wrap: break-word;
+}
